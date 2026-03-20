@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Education – Cecilia Reichert</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1a4fd6;--blue-mid:#3a6de8;--blue-light:#e8effe;--blue-dark:#0f2f8a;
+  --gold:#c9960a;--gold-light:#fdf3d6;
+  --green:#1a7a4a;--green-light:#e6f7ee;
+  --coral:#c94a1a;--coral-light:#fdeee8;
+  --ink:#0d0d0d;--muted:#5a5a5a;--subtle:#8a8a8a;
+  --bg:#f7f7f5;--white:#ffffff;--border:#e0e0dc;
+}
+body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 3.5rem;height:62px;box-shadow:0 1px 8px rgba(0,0,0,0.04)}
+.nav-name{font-size:1rem;font-weight:800;text-decoration:none;color:var(--ink)}
+.nav-name span{color:var(--blue)}
+.nav-links{display:flex;gap:2.25rem;align-items:center}
+.nav-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);font-weight:600;transition:color 0.2s;padding-bottom:3px}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a.active{color:var(--blue);border-bottom:2px solid var(--blue)}
+.page-banner{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,var(--blue-mid) 100%);color:#fff;padding:4rem 3.5rem 3rem;position:relative;overflow:hidden}
+.page-banner::before{content:'';position:absolute;right:-80px;top:-80px;width:380px;height:380px;border-radius:50%;border:60px solid rgba(255,255,255,0.05)}
+.page-banner::after{content:'';position:absolute;right:60px;bottom:-120px;width:280px;height:280px;border-radius:50%;border:40px solid rgba(255,255,255,0.04)}
+.banner-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.banner-label{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;opacity:0.65;margin-bottom:0.75rem}
+.banner-inner h1{font-family:Georgia,serif;font-size:2.8rem;font-weight:normal;line-height:1.1;margin-bottom:0.75rem}
+.banner-inner p{font-size:0.95rem;opacity:0.8;max-width:520px;line-height:1.65}
+.banner-pills{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1.5rem}
+.bpill{background:rgba(255,255,255,0.15);color:#fff;font-size:0.73rem;font-weight:600;letter-spacing:0.06em;padding:5px 13px;border-radius:20px}
+.content{max-width:1100px;margin:0 auto;padding:3.5rem 3.5rem 6rem}
+.section-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;margin-top:3.5rem}
+.section-head:first-child{margin-top:0}
+.section-label{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);font-weight:700}
+.section-line{flex:1;height:1px;background:var(--border)}
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:var(--border)}
+.t-entry{position:relative;margin-bottom:2rem}
+.t-entry::before{content:'';position:absolute;left:-2.35rem;top:10px;width:14px;height:14px;border-radius:50%;border:2.5px solid var(--white);box-shadow:0 0 0 2px var(--border)}
+.t-entry.color-blue::before{background:var(--blue);box-shadow:0 0 0 2px var(--blue-light)}
+.t-entry.color-gold::before{background:var(--gold);box-shadow:0 0 0 2px var(--gold-light)}
+.t-entry.color-green::before{background:var(--green);box-shadow:0 0 0 2px var(--green-light)}
+.t-entry.color-coral::before{background:var(--coral);box-shadow:0 0 0 2px var(--coral-light)}
+.edu-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color 0.2s}
+.edu-card:hover{border-color:var(--blue-mid)}
+.card-top{padding:1.75rem 2rem 1.5rem;border-bottom:1px solid var(--border)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.5rem}
+.card-school{font-size:1.05rem;font-weight:700;color:var(--ink)}
+.card-date{font-size:0.73rem;font-weight:700;letter-spacing:0.07em;padding:4px 11px;border-radius:20px;white-space:nowrap}
+.date-blue{background:var(--blue-light);color:var(--blue)}
+.date-gold{background:var(--gold-light);color:var(--gold)}
+.date-green{background:var(--green-light);color:var(--green)}
+.date-coral{background:var(--coral-light);color:var(--coral)}
+.card-degree{font-size:0.88rem;font-style:italic;color:var(--muted);margin-bottom:0.35rem}
+.card-location{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--subtle)}
+.card-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.card-section{padding:1.25rem 2rem;border-right:1px solid var(--border)}
+.card-section:last-child{border-right:none}
+.card-section.full{grid-column:1/-1;border-right:none}
+.cs-label{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem}
+.cs-label.l-blue{color:var(--blue)}.cs-label.l-gold{color:var(--gold)}.cs-label.l-green{color:var(--green)}.cs-label.l-coral{color:var(--coral)}
+.cs-val{font-size:0.83rem;line-height:1.65;color:#333}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cert-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem}
+.cert-icon{width:36px;height:36px;border-radius:4px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.cert-name{font-size:0.9rem;font-weight:600;color:var(--ink);margin-bottom:0.2rem}
+.cert-issuer{font-size:0.78rem;color:var(--muted)}
+@media(max-width:900px){.card-body{grid-template-columns:1fr}.card-section{border-right:none;border-bottom:1px solid var(--border)}.card-section:last-child{border-bottom:none}.cert-grid{grid-template-columns:1fr}}
+@media(max-width:600px){nav{padding:0 1.25rem}.nav-links{gap:1rem}.page-banner{padding:2.5rem 1.5rem 2rem}.banner-inner h1{font-size:2rem}.content{padding:2.5rem 1.5rem 4rem}.timeline{padding-left:1.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-name" href="index.html">Cecilia <span>Reichert</span></a>
+  <div class="nav-links">
+    <a href="index.html">About</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="banner-label">Education</div>
+    <h1>Educated Across<br>Four Continents.</h1>
+    <p>From Boston to Madrid, Seoul to Thessaloniki — a global academic journey grounded in finance and international business.</p>
+    <div class="banner-pills">
+      <span class="bpill">Boston, MA</span>
+      <span class="bpill">Madrid, Spain</span>
+      <span class="bpill">Seoul, South Korea</span>
+      <span class="bpill">Thessaloniki, Greece</span>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="section-head">
+    <span class="section-label">Academic Timeline</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline">
+    <div class="t-entry color-blue">
+      <div class="edu-card">
+        <div class="card-top">
+          <div class="card-header">
+            <span class="card-school">Northeastern University — D'Amore-McKim School of Business</span>
+            <span class="card-date date-blue">Aug. 2022 – Dec. 2026</span>
+          </div>
+          <div class="card-degree">Candidate for BSIB in International Business · Finance Concentration · John Martinson Honors Program</div>
+          <div class="card-location">Boston, MA</div>
+        </div>
+        <div class="card-body">
+          <div class="card-section">
+            <div class="cs-label l-blue">GPA &amp; Awards</div>
+            <div class="cs-val">3.8 / 4.0 · Dean's List (3 semesters)<br>Honors Global Funding (2 rounds) · Herman Scholarship</div>
+          </div>
+          <div class="card-section">
+            <div class="cs-label l-blue">Activities</div>
+            <div class="cs-val">LATAM Business Club · Audit Research Assistant · Disability Resource Center Note Taking Aid</div>
+          </div>
+          <div class="card-section full">
+            <div class="cs-label l-blue">Coursework</div>
+            <div class="cs-val">Financial Accounting &amp; Reporting · Financial Management · Microeconomics · Business Statistics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t-entry color-gold">
+      <div class="edu-card">
+        <div class="card-top">
+          <div class="card-header">
+            <span class="card-school">Universidad Pontificia Comillas</span>
+            <span class="card-date date-gold">Jan. – May 2025</span>
+          </div>
+          <div class="card-degree">Semester Study Abroad</div>
+          <div class="card-location">Madrid, Spain</div>
+        </div>
+        <div class="card-body">
+          <div class="card-section full">
+            <div class="cs-label l-gold">Coursework</div>
+            <div class="cs-val">Corporate Finance · Financial Consolidation · Organizational Behavior · Consumer Behavior</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t-entry color-green">
+      <div class="edu-card">
+        <div class="card-top">
+          <div class="card-header">
+            <span class="card-school">Yonsei University</span>
+            <span class="card-date date-green">May – June 2024</span>
+          </div>
+          <div class="card-degree">Dialogue of Civilization</div>
+          <div class="card-location">Seoul, South Korea</div>
+        </div>
+        <div class="card-body">
+          <div class="card-section">
+            <div class="cs-label l-green">Coursework</div>
+            <div class="cs-val">Supply Chain Management · Global Supply Chain Strategy</div>
+          </div>
+          <div class="card-section">
+            <div class="cs-label l-green">Field Learning</div>
+            <div class="cs-val">Executive instruction from LG Corporation, Samsung, SK Hynix &amp; KIA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t-entry color-coral">
+      <div class="edu-card">
+        <div class="card-top">
+          <div class="card-header">
+            <span class="card-school">American College of Thessaloniki</span>
+            <span class="card-date date-coral">Sep. – Dec. 2022</span>
+          </div>
+          <div class="card-degree">Semester Study Abroad</div>
+          <div class="card-location">Thessaloniki, Greece</div>
+        </div>
+        <div class="card-body">
+          <div class="card-section full">
+            <div class="cs-label l-coral">Awards &amp; Activities</div>
+            <div class="cs-val">Volunteer at ELEPAP of Thessaloniki — Rehabilitation for the Disabled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-head">
+    <span class="section-label">Certifications</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-icon">🏦</div>
+      <div>
+        <div class="cert-name">Investment Banking Virtual Experience</div>
+        <div class="cert-issuer">J.P. Morgan</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📊</div>
+      <div>
+        <div class="cert-name">Bloomberg Finance Fundamentals</div>
+        <div class="cert-issuer">Bloomberg</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

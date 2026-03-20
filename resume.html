@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resume – Cecilia Reichert</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1a4fd6;--blue-mid:#3a6de8;--blue-light:#e8effe;--blue-dark:#0f2f8a;
+  --ink:#0d0d0d;--muted:#5a5a5a;--subtle:#8a8a8a;
+  --bg:#f7f7f5;--white:#ffffff;--border:#e0e0dc;
+}
+body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg)}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 3.5rem;height:62px;box-shadow:0 1px 8px rgba(0,0,0,0.04)}
+.nav-name{font-size:1rem;font-weight:800;text-decoration:none;color:var(--ink)}
+.nav-name span{color:var(--blue)}
+.nav-links{display:flex;gap:2.25rem;align-items:center}
+.nav-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);font-weight:600;transition:color 0.2s;padding-bottom:3px}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a.active{color:var(--blue);border-bottom:2px solid var(--blue)}
+.resume-banner{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,var(--blue-mid) 100%);color:#fff;padding:3rem 3.5rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;position:relative;overflow:hidden}
+.resume-banner::before{content:'';position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;border:50px solid rgba(255,255,255,0.05)}
+.rb-left{position:relative;z-index:1}
+.rb-left h1{font-family:Georgia,serif;font-size:2.4rem;font-weight:normal;margin-bottom:0.35rem}
+.rb-left p{font-size:0.88rem;opacity:0.75;letter-spacing:0.04em}
+.rb-right{position:relative;z-index:1;text-align:right;font-size:0.85rem;opacity:0.88;line-height:2}
+.rb-right a{color:#fff;text-decoration:none}
+.rb-right a:hover{text-decoration:underline}
+.page{max-width:900px;margin:0 auto;padding:3rem 3rem 5rem}
+.r-section{margin-bottom:2.5rem}
+.r-section-title{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);font-weight:700;padding-bottom:0.6rem;border-bottom:2px solid var(--blue);margin-bottom:1.5rem}
+.entry{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.4rem 1.6rem;margin-bottom:0.875rem;position:relative;overflow:hidden;transition:border-color 0.2s}
+.entry::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue);opacity:0;transition:opacity 0.2s}
+.entry:hover{border-color:var(--blue-mid)}
+.entry:hover::before{opacity:1}
+.eh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:0.2rem}
+.e-org{font-size:0.95rem;font-weight:700}
+.e-loc{font-size:0.78rem;color:var(--subtle)}
+.er{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin:0.2rem 0 0.7rem}
+.e-title{font-size:0.865rem;font-style:italic;color:var(--muted)}
+.e-date{font-size:0.72rem;font-weight:700;background:var(--blue-light);color:var(--blue);padding:3px 10px;border-radius:20px;white-space:nowrap}
+ul{padding-left:1.15rem}
+ul li{font-size:0.845rem;line-height:1.7;margin-bottom:0.2rem;color:#2a2a2a}
+.edu-body{font-size:0.845rem;line-height:1.75;color:#2a2a2a}
+.edu-body strong{color:var(--ink);font-weight:700}
+.skills-2col{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem 2.5rem}
+.skill-item .sk-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:var(--ink);display:block;margin-bottom:2px}
+.skill-item .sk-val{font-size:0.845rem;line-height:1.65;color:#333}
+@media(max-width:700px){nav{padding:0 1.25rem}.nav-links{gap:1rem}.resume-banner{padding:2.25rem 1.5rem}.rb-right{text-align:left}.page{padding:2rem 1.25rem 4rem}.skills-2col{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-name" href="index.html">Cecilia <span>Reichert</span></a>
+  <div class="nav-links">
+    <a href="index.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="resume-banner">
+  <div class="rb-left">
+    <h1>Cecilia Reichert</h1>
+    <p>BS International Business · Finance · Northeastern University</p>
+  </div>
+  <div class="rb-right">
+    (857) 395-7324<br>
+    <a href="mailto:reichert.c@northeastern.edu">reichert.c@northeastern.edu</a><br>
+    <a href="https://linkedin.com/in/cecilia-reichert/" target="_blank">linkedin.com/in/cecilia-reichert ↗</a>
+  </div>
+</div>
+<div class="page">
+  <div class="r-section">
+    <div class="r-section-title">Education</div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Northeastern University — D'Amore-McKim School of Business</span><span class="e-loc">Boston, MA</span></div>
+      <div class="er"><span class="e-title">BSIB in International Business · Finance Concentration · John Martinson Honors Program</span><span class="e-date">Aug. 2022 – Dec. 2026</span></div>
+      <div class="edu-body"><strong>GPA:</strong> 3.8/4.0 &nbsp;·&nbsp; <strong>Awards:</strong> Dean's List (3 semesters), Honors Global Funding (2 rounds), Herman Scholarship<br><strong>Activities:</strong> LATAM Business Club · Audit Research Assistant · Disability Resource Center Note Taking Aid<br><strong>Coursework:</strong> Financial Accounting &amp; Reporting · Financial Management · Microeconomics · Business Statistics</div>
+    </div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Universidad Pontificia Comillas</span><span class="e-loc">Madrid, Spain</span></div>
+      <div class="er"><span class="e-title">Semester Study Abroad</span><span class="e-date">Jan. – May 2025</span></div>
+      <div class="edu-body"><strong>Coursework:</strong> Corporate Finance · Financial Consolidation · Organizational Behavior · Consumer Behavior</div>
+    </div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Yonsei University</span><span class="e-loc">Seoul, South Korea</span></div>
+      <div class="er"><span class="e-title">Dialogue of Civilization</span><span class="e-date">May – June 2024</span></div>
+      <div class="edu-body"><strong>Coursework:</strong> Supply Chain Management · Global Supply Chain Strategy<br><strong>Field Learning:</strong> Executive instruction from LG Corporation, Samsung, SK Hynix &amp; KIA</div>
+    </div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">American College of Thessaloniki</span><span class="e-loc">Thessaloniki, Greece</span></div>
+      <div class="er"><span class="e-title">Semester Study Abroad</span><span class="e-date">Sep. – Dec. 2022</span></div>
+      <div class="edu-body"><strong>Activities:</strong> Volunteer at ELEPAP of Thessaloniki — Rehabilitation for the Disabled</div>
+    </div>
+  </div>
+  <div class="r-section">
+    <div class="r-section-title">Professional Experience</div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Boston Symphony Orchestra</span><span class="e-loc">Boston, MA</span></div>
+      <div class="er"><span class="e-title">Accounts Payable Co-op</span><span class="e-date">July – Dec. 2025</span></div>
+      <ul>
+        <li>Managed $65K+ in daily invoice workflows, processing 9.3K+ invoices while streamlining payment cycles and ensuring compliance for transactions with the company's largest suppliers and external artists.</li>
+        <li>Migrated 950+ key supplier accounts from check payments to the company's ACH system, improving processing accuracy and operational efficiency.</li>
+        <li>Led negotiation of $5.6M+ in supplier contracts via Workday, applying cost-benefit analysis to align procurement partners with company goals and bottom-line performance.</li>
+        <li>Authored a comprehensive Workday Accounts Payable handbook in PowerPoint, reducing new-hire training time by ~30% while standardizing AP workflows.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Boston Consulting Group</span><span class="e-loc">Boston, MA</span></div>
+      <div class="er"><span class="e-title">Public Data Research Co-op</span><span class="e-date">July – Dec. 2024</span></div>
+      <ul>
+        <li>Analyzed and synthesized data for comparative market research used in 160+ global consulting cases.</li>
+        <li>Utilized Bloomberg Terminal, Excel, and internal analytical tools to produce financial models, valuation scenarios, and investment strategies across 80+ global offices.</li>
+        <li>Gained federal clearance to work on 12+ large-scale national security and defense cases valued at $800M+.</li>
+        <li>Developed a comprehensive dataset detailing cybersecurity measures of 3,000+ top-grossing public companies using S&amp;P Capital IQ, widely referenced for compliance benchmarking and enterprise risk evaluation.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Backlite Media</span><span class="e-loc">Dubai, U.A.E.</span></div>
+      <div class="er"><span class="e-title">Financial Intern</span><span class="e-date">July – Aug. 2023</span></div>
+      <ul>
+        <li>Collaborated directly with the CFO to create company insights into financial standing using Microsoft Dynamics 365, Salesforce, and advanced Excel analysis.</li>
+        <li>Curated and analyzed data feeds from top clients to drive customer engagement and optimize digital asset efficiency, generating $500K+/month in advertising revenue.</li>
+        <li>Presented cost-benefit analysis and financial forecasting on $350M+ in assets to the CEO, influencing long-term business strategy and capital allocation decisions.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="r-section">
+    <div class="r-section-title">Teaching &amp; Leadership</div>
+    <div class="entry">
+      <div class="eh"><span class="e-org">Northeastern University — D'Amore-McKim School of Business</span><span class="e-loc">Boston, MA</span></div>
+      <div class="er"><span class="e-title">Financial Peer Tutor</span><span class="e-date">Jan. 2024 – Present</span></div>
+      <ul>
+        <li>Provides tailored academic instruction in Financial Management, Financial Accounting, Business Statistics, and Marketing across more than 20 course sections.</li>
+        <li>Maintains a 100% satisfaction rating; simplifies complex financial models including NPV, IRR, and ratio analysis in high-rigor quantitative coursework.</li>
+      </ul>
+      <div class="er" style="margin-top:0.9rem"><span class="e-title">Teacher's Assistant, Financial Accounting</span><span class="e-date">Jan. – May 2024</span></div>
+      <ul>
+        <li>Selected as one of 150 students to support instruction, dedicating 300+ teaching hours to 200+ students. Led 30 peer learning groups, increasing attendance by 20%.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="r-section">
+    <div class="r-section-title">Additional Information</div>
+    <div class="entry">
+      <div class="skills-2col">
+        <div class="skill-item"><span class="sk-label">Technical Skills</span><span class="sk-val">Tableau, Excel, PowerPoint, Bloomberg Terminal, Salesforce, Workday, Python</span></div>
+        <div class="skill-item"><span class="sk-label">Certifications</span><span class="sk-val">J.P. Morgan Investment Banking Simulation · Bloomberg Finance Fundamentals</span></div>
+        <div class="skill-item" style="margin-top:0.5rem"><span class="sk-label">Languages</span><span class="sk-val">English (native) · French &amp; Spanish (professional) · Portuguese (conversational)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

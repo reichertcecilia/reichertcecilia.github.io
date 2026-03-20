@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact – Cecilia Reichert</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1a4fd6;--blue-mid:#3a6de8;--blue-light:#e8effe;--blue-dark:#0f2f8a;
+  --ink:#0d0d0d;--muted:#5a5a5a;--subtle:#8a8a8a;
+  --bg:#f7f7f5;--white:#ffffff;--border:#e0e0dc;
+}
+body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 3.5rem;height:62px;box-shadow:0 1px 8px rgba(0,0,0,0.04)}
+.nav-name{font-size:1rem;font-weight:800;text-decoration:none;color:var(--ink)}
+.nav-name span{color:var(--blue)}
+.nav-links{display:flex;gap:2.25rem;align-items:center}
+.nav-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);font-weight:600;transition:color 0.2s;padding-bottom:3px}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a.active{color:var(--blue);border-bottom:2px solid var(--blue)}
+.page-banner{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,var(--blue-mid) 100%);color:#fff;padding:4rem 3.5rem 3rem;position:relative;overflow:hidden}
+.page-banner::before{content:'';position:absolute;right:-80px;top:-80px;width:380px;height:380px;border-radius:50%;border:60px solid rgba(255,255,255,0.05)}
+.banner-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.banner-label{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;opacity:0.65;margin-bottom:0.75rem}
+.banner-inner h1{font-family:Georgia,serif;font-size:2.8rem;font-weight:normal;line-height:1.1;margin-bottom:0.75rem}
+.banner-inner p{font-size:0.95rem;opacity:0.8;max-width:520px;line-height:1.65}
+.content{max-width:1100px;margin:0 auto;padding:3.5rem 3.5rem 6rem}
+.contact-layout{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:1rem}
+.c-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem 1.75rem;display:flex;align-items:center;gap:1.25rem;text-decoration:none;color:var(--ink);transition:border-color 0.2s,transform 0.15s}
+.c-card:hover{border-color:var(--blue);transform:translateX(4px)}
+.c-icon{width:42px;height:42px;border-radius:6px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.c-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:0.2rem}
+.c-val{font-size:0.95rem;font-weight:500;color:var(--ink)}
+.c-arrow{margin-left:auto;font-size:1.1rem;color:var(--blue);opacity:0;transition:opacity 0.2s}
+.c-card:hover .c-arrow{opacity:1}
+.c-card.no-link{cursor:default}
+.c-card.no-link:hover{transform:none;border-color:var(--border)}
+.sidebar-card{background:var(--blue);color:#fff;border-radius:8px;padding:2rem;margin-bottom:1.25rem}
+.sidebar-card h3{font-family:Georgia,serif;font-size:1.4rem;font-weight:normal;margin-bottom:0.75rem}
+.sidebar-card p{font-size:0.875rem;line-height:1.7;opacity:0.85;margin-bottom:1.25rem}
+.sidebar-btn{display:inline-block;background:#fff;color:var(--blue);font-size:0.77rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:10px 20px;border-radius:3px;transition:opacity 0.2s}
+.sidebar-btn:hover{opacity:0.85}
+.lang-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.75rem}
+.lang-card h4{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:1.25rem}
+.lang-row{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border)}
+.lang-row:last-child{border-bottom:none}
+.lang-name{font-size:0.88rem;font-weight:600}
+.lang-level{font-size:0.73rem;color:var(--muted);font-style:italic}
+.lang-bar{width:80px;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.lang-fill{height:100%;border-radius:3px;background:var(--blue)}
+@media(max-width:800px){.contact-layout{grid-template-columns:1fr}}
+@media(max-width:600px){nav{padding:0 1.25rem}.nav-links{gap:1rem}.page-banner{padding:2.5rem 1.5rem 2rem}.banner-inner h1{font-size:2rem}.content{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-name" href="index.html">Cecilia <span>Reichert</span></a>
+  <div class="nav-links">
+    <a href="index.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="banner-label">Contact</div>
+    <h1>Let's connect.</h1>
+    <p>I'm actively looking for co-op opportunities for July–December 2026. Reach out anytime.</p>
+  </div>
+</div>
+<div class="content">
+  <div class="contact-layout">
+    <div class="contact-cards">
+      <a class="c-card" href="mailto:reichert.c@northeastern.edu">
+        <div class="c-icon">✉️</div>
+        <div><div class="c-label">Email</div><div class="c-val">reichert.c@northeastern.edu</div></div>
+        <span class="c-arrow">→</span>
+      </a>
+      <a class="c-card" href="tel:+18573957324">
+        <div class="c-icon">📞</div>
+        <div><div class="c-label">Phone</div><div class="c-val">(857) 395-7324</div></div>
+        <span class="c-arrow">→</span>
+      </a>
+      <a class="c-card" href="https://linkedin.com/in/cecilia-reichert/" target="_blank">
+        <div class="c-icon">💼</div>
+        <div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/cecilia-reichert</div></div>
+        <span class="c-arrow">→</span>
+      </a>
+      <div class="c-card no-link">
+        <div class="c-icon">📍</div>
+        <div><div class="c-label">Location</div><div class="c-val">Boston, MA</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="sidebar-card">
+        <h3>Open to opportunities.</h3>
+        <p>Seeking a co-op placement for July–December 2026 in finance, business analysis, or international business roles.</p>
+        <a class="sidebar-btn" href="resume.html">View My Resume</a>
+      </div>
+      <div class="lang-card">
+        <h4>Languages</h4>
+        <div class="lang-row">
+          <span class="lang-name">English</span>
+          <span class="lang-level">Native</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">French</span>
+          <span class="lang-level">Professional</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:85%"></div></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">Spanish</span>
+          <span class="lang-level">Professional</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:85%"></div></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">Portuguese</span>
+          <span class="lang-level">Conversational</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

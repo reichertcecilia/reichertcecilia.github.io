@@ -13,7 +13,6 @@
   --bg:#f7f7f5;--white:#ffffff;--border:#e0e0dc;
 }
 body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3.5rem;height:62px;transition:background 0.3s,border-color 0.3s,box-shadow 0.3s;background:transparent;border-bottom:1px solid transparent}
 nav.scrolled{background:var(--white);border-bottom-color:var(--border);box-shadow:0 1px 8px rgba(0,0,0,0.06)}
 .nav-name{font-size:1rem;font-weight:800;text-decoration:none;letter-spacing:-0.01em;color:#fff;transition:color 0.3s}
@@ -27,7 +26,6 @@ nav.scrolled .nav-links a{color:var(--muted)}
 nav.scrolled .nav-links a:hover{color:var(--blue)}
 .nav-links a.active{color:#fff;border-bottom:2px solid rgba(255,255,255,0.5)}
 nav.scrolled .nav-links a.active{color:var(--blue);border-bottom-color:var(--blue)}
-
 .hero{height:100vh;min-height:620px;background:var(--blue-dark);position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#070e2b 0%,#0f2f8a 40%,#1a4fd6 75%,#3a6de8 100%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px}
@@ -47,21 +45,10 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
 .btn-outline-white:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.55)}
 .scroll-hint{position:absolute;bottom:2rem;right:3.5rem;z-index:2;display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.3);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600}
 .scroll-line{width:40px;height:1px;background:rgba(255,255,255,0.18)}
-
 .sections{max-width:1100px;margin:0 auto;padding:5rem 3.5rem 6rem}
 .section-head{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
 .section-label{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);font-weight:700}
 .section-line{flex:1;height:1px;background:var(--border)}
-
-.globe-strip{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:2.25rem 2.5rem;margin-bottom:4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.globe-text h2{font-family:Georgia,serif;font-size:1.5rem;font-weight:normal;margin-bottom:0.3rem;color:var(--ink)}
-.globe-text p{font-size:0.875rem;color:var(--muted);line-height:1.6;max-width:380px}
-.globe-locations{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--border);padding-left:1.75rem}
-.globe-loc{font-size:0.8rem;color:var(--muted);padding:0.35rem 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:2rem}
-.globe-loc:last-child{border-bottom:none}
-.loc-name{font-weight:600;color:var(--ink)}
-.loc-country{color:var(--subtle);font-size:0.75rem}
-
 .xp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
 .xp-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.5rem;position:relative;overflow:hidden;transition:border-color 0.2s}
 .xp-card:hover{border-color:var(--blue-mid)}
@@ -72,13 +59,11 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
 .xp-date{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:0.75rem}
 .xp-desc{font-size:0.82rem;line-height:1.65;color:#444}
 .loc-badge{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--subtle);margin-top:0.85rem}
-
 @media(max-width:900px){nav{padding:0 1.5rem}.hero-content{padding:0 1.5rem 5rem}.xp-grid{grid-template-columns:1fr 1fr}.sections{padding:4rem 1.5rem 5rem}}
-@media(max-width:600px){.nav-links{gap:1.25rem}.hero-content{padding:0 1.25rem 4rem}h1{font-size:2.8rem}.xp-grid{grid-template-columns:1fr}.globe-strip{flex-direction:column}.scroll-hint{display:none}}
+@media(max-width:600px){.nav-links{gap:1.25rem}.hero-content{padding:0 1.25rem 4rem}h1{font-size:2.8rem}.xp-grid{grid-template-columns:1fr}.scroll-hint{display:none}}
 </style>
 </head>
 <body>
-
 <nav id="nav">
   <a class="nav-name" href="index.html">Cecilia <span>Reichert</span></a>
   <div class="nav-links">
@@ -88,7 +73,6 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
     <a href="contact.html">Contact</a>
   </div>
 </nav>
-
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -108,7 +92,6 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
   </div>
   <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
 </div>
-
 <div class="sections">
   <div class="section-head">
     <span class="section-label">Experience Highlights</span>
@@ -138,7 +121,6 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
       <div class="loc-badge">Dubai, UAE</div>
     </div>
   </div>
-
   <div style="margin-top:4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;padding-top:3rem;border-top:1px solid var(--border)">
     <div>
       <div class="section-label" style="margin-bottom:1rem">About</div>
@@ -151,7 +133,6 @@ h1 .line3{font-style:italic;color:var(--blue-mid)}
     </div>
   </div>
 </div>
-
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
